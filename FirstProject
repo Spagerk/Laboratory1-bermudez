@@ -1,6 +1,12 @@
 #include <iostream>
+using namespace std;
 
-int main(){
-cout << "Hellon world" << endl;
-return 0;
+int main (){
+	cout << "           MAIN MENU" << endl;
+	cout << "   -------------------------" << endl;
+	cout << "1. To Display List of Files" << endl;
+	coTo Create New Directory" << endl;
+	cout << "3. To Change the Working Directory" << endl;
+	cout << "4. Exit" << endl;
+	return 0;
 }
