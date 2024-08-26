@@ -1,4 +1,7 @@
 #include <iostream>
+#inlcude <direct.h>
+#include <dos.h>
+
 using namespace std;
 
 int main (){
