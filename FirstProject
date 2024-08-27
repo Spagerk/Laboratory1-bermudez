@@ -1,6 +1,4 @@
 #include <iostream>
-#inlcude <direct.h>
-#include <dos.h>
 
 using namespace std;
 
@@ -11,5 +9,33 @@ int main (){
 	coTo Create New Directory" << endl;
 	cout << "3. To Change the Working Directory" << endl;
 	cout << "4. Exit" << endl;
+        cout << "Enter your choice: ";
+        cin >> choice;
+        cout << endl;
+
+    switch (choice) {
+    case 1:
+        cout << "       LIST FILE DETAIL" << endl;
+        cout << "-------------------------------\n" << endl;
+        cout << "1. List All File\n" << endl;
+        cout << "Enter the Number: ";
+        cin >> directory;
+        break;
+    case 2:
+        cout << "Enter directory name to create: ";
+        cin >> directory;        
+        break;
+    case 3:
+        cout << "Enter directory path to change to: ";
+        cin >> directory;        
+        break;
+    case 4:
+        cout << "Exiting program..." << endl;
+        break;
+    default:
+        cout << "Invalid choice. Please try again." << endl;
+    }
+    cout << endl;
+
 	return 0;
 }
