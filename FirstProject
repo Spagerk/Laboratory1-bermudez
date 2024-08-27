@@ -1,20 +1,25 @@
 #include <iostream>
-
 using namespace std;
+
 void displayFiles(const string& directory);
 void createDirectory(const string& directory);
-void changeDirectory(const string& directory);
+void changeDirectory(int enter, string& name ,string& directory);
 
-int main (){
-	cout << "           MAIN MENU" << endl;
-	cout << "   -------------------------" << endl;
-	cout << "1. To Display List of Files" << endl;
-	coTo Create New Directory" << endl;
-	cout << "3. To Change the Working Directory" << endl;
-	cout << "4. Exit" << endl;
-        cout << "Enter your choice: ";
-        cin >> choice;
-        cout << endl;
+int main() {
+    int choice;
+    int enter;
+    string name;
+    string directory;
+
+    cout << "           MAIN MENU" << endl;
+    cout << "   -------------------------" << endl;
+    cout << "1. To Display List of Files" << endl;
+    cout << "2. To Create New Directory" << endl;
+    cout << "3. To Change the Working Directory" << endl;
+    cout << "4. Exit" << endl;
+    cout << "Enter your choice: ";
+    cin >> choice;
+    cout << endl;
 
     switch (choice) {
     case 1:
@@ -22,18 +27,26 @@ int main (){
         cout << "-------------------------------\n" << endl;
         cout << "1. List All File\n" << endl;
         cout << "Enter the Number: ";
-        cin >> directory;  
-        displayFiles(directory);       
+        cin >> directory;
+        cout << endl;
+        displayFiles(directory);
         break;
     case 2:
-        cout << "Enter directory name to create: ";
+        cout << "Enter directory name: ";
         cin >> directory;
         createDirectory(directory);
         break;
     case 3:
-        cout << "Enter directory path to change to: ";
-        cin >> directory; 
-        changeDirectory(directory);
+        cout << "Current directory : c:/Users/Username/Documents   " << endl;
+        cout << "     Change Directory" << endl;
+        cout << "-------------------------------" << endl;
+        cout << "1. Step by Step Backward" << endl;
+        cout << "2. Go to Root Directory" << endl;
+        cout << "3. Forward Directory" << endl;
+        cout << "Enter a number: ";
+        cin >> enter;
+        cout << endl;
+        changeDirectory(enter, name ,directory);
         break;
     case 4:
         cout << "Exiting program..." << endl;
@@ -43,23 +56,35 @@ int main (){
     }
     cout << endl;
 
-	return 0;
+    return 0;
 }
-void displayFiles(const string& directory) {
-cout << "List of All Files" << endl;
-cout << "file1.txt" << endl;
-cout << "file2.cpp" << endl;
-cout << "report.doc" << endl;
-cout << "image.jpg" << endl;
-cout << "(continues...)" << endl;
 
+void displayFiles(const string& directory) {
+    cout << "List of All Files" << endl;
+    cout << "file1.txt" << endl;
+    cout << "file2.cpp" << endl;
+    cout << "report.doc" << endl;
+    cout << "image.jpg" << endl;
+    cout << "(continues...\n)" << endl;
+    cout << "(Total Files: 4)" << endl;
 }
 
 void createDirectory(const string& directory) {
-
+    cout << "Current directory : c:/Users/Username/Documents   " << endl;
+    cout << directory + " Directory Successfully Created" << endl;
 }
 
-void changeDirectory(const string& directory) {
+void changeDirectory(int enter, string& name, string& directory) {
 
+    if (enter == 1) {
+    cout << "Moved one directory back." << endl;
+    } else if (enter == 2) {
+    cout << "Moved to root directory." << endl;
+    } else if (enter == 3) {
+    cout << "Please enter the Directory Name: ";
+    cin >> name;
+    cout << "Current directory : c:/Users/Username/Documents/" + name << endl;
+    } else {
+    cout << "Invalid input" << endl;
+    }
 }
-    
