@@ -77,14 +77,18 @@ void createDirectory(const string& directory) {
 void changeDirectory(int enter, string& name, string& directory) {
 
     if (enter == 1) {
-    cout << "Moved one directory back." << endl;
+    cout << "Please enter the Directory Name: ";
+    cin >> name;
+    cout << name + " has been moved one directory back." << endl;
     } else if (enter == 2) {
-    cout << "Moved to root directory." << endl;
+    cout << "Please enter the Directory Name: ";
+    cin >> name;
+    cout << name + " has been moved to root directory." << endl;
     } else if (enter == 3) {
     cout << "Please enter the Directory Name: ";
     cin >> name;
     cout << "Current directory : c:/Users/Username/Documents/" + name << endl;
     } else {
-    cout << "Invalid input" << endl;
+    cout << "Invalid input." << endl;
     }
 }
