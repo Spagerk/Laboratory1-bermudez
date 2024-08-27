@@ -1,6 +1,9 @@
 #include <iostream>
 
 using namespace std;
+void displayFiles(const string& directory);
+void createDirectory(const string& directory);
+void changeDirectory(const string& directory);
 
 int main (){
 	cout << "           MAIN MENU" << endl;
@@ -19,15 +22,18 @@ int main (){
         cout << "-------------------------------\n" << endl;
         cout << "1. List All File\n" << endl;
         cout << "Enter the Number: ";
-        cin >> directory;
+        cin >> directory;  
+        displayFiles(directory);       
         break;
     case 2:
         cout << "Enter directory name to create: ";
-        cin >> directory;        
+        cin >> directory;
+        createDirectory(directory);
         break;
     case 3:
         cout << "Enter directory path to change to: ";
-        cin >> directory;        
+        cin >> directory; 
+        changeDirectory(directory);
         break;
     case 4:
         cout << "Exiting program..." << endl;
@@ -39,3 +45,21 @@ int main (){
 
 	return 0;
 }
+void displayFiles(const string& directory) {
+cout << "List of All Files" << endl;
+cout << "file1.txt" << endl;
+cout << "file2.cpp" << endl;
+cout << "report.doc" << endl;
+cout << "image.jpg" << endl;
+cout << "(continues...)" << endl;
+
+}
+
+void createDirectory(const string& directory) {
+
+}
+
+void changeDirectory(const string& directory) {
+
+}
+    
